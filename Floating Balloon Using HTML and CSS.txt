@@ -1,0 +1,54 @@
+<html>
+<body>
+<div class="balloon">
+    <style>
+        body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: linear-gradient(to bottom, #87CEFB, #ffffff);
+overflow: hidden;
+margin: 0;
+}
+.balloon {
+width: 100px;
+height: 130px;
+background: radial-gradient(circle at 50% 20%, #ff4d4d, #cc0000);
+border-radius: 50%;
+position: relative;
+animation: float 3s ease-in-out infinite;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+.balloon::before {
+content: "";
+position: absolute;
+bottom: -20px;
+left: 50%;
+transform: translatex(-50%);
+width: 10px;
+height: 20px;
+background: #cc0000;
+border-radius: 50%;
+}
+.string {
+position: absolute;
+top: 100%;
+left: 50%;
+width: 2px;
+height: 100px;
+background: #663300;
+transform: translateX(-50%);
+}
+@keyframes float {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-20px);
+}
+}
+    </style>
+<div class="string"></div>
+</div>
+</body>
+</html>
